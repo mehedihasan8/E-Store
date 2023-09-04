@@ -1,7 +1,8 @@
 import "./App.css";
+import NavBar from "./Pages/Shared/NavBar/NavBar";
 
 function App() {
-  return <h1>home</h1>;
+  return <NavBar />;
 }
 
 export default App;
