@@ -6,10 +6,7 @@ import { useEffect, useState } from "react";
 
 const Order = () => {
   const product = useCard();
-  // const product = [];
-  // console.log(product);
   const [total, setTotal] = useState(0);
-  // const allId = JSON.parse(localStorage.getItem("productId")) || [];
 
   useEffect(() => {
     const total =
@@ -17,19 +14,6 @@ const Order = () => {
     setTotal(total);
   }, [product]);
 
-  // const product = products.filter((p) => allId.includes(p.id));
-  // console.log(product);
-
-  // const [products, setProducts] = useState([]);
-  // // const [id, setId] = useState(0);
-  // const allId = localStorage.getItem("productId");
-  // // const id = allId?.map((i) => i);
-
-  // useEffect(() => {
-  //   fetch("product.json")
-  //     .then((res) => res.json())
-  //     .then((data) => setProducts(data));
-  // }, []);
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -41,15 +25,12 @@ const Order = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result) {
-        const idToDelete = id; // Replace with the ID you want to delete
+        const idToDelete = id;
 
-        // Get the existing array of IDs from localStorage
         const existingIds = JSON.parse(localStorage.getItem("productId")) || [];
 
-        // Remove the ID you want to delete
         const updatedIds = existingIds.filter((id) => id !== idToDelete);
 
-        // Update the "productId" key in localStorage with the modified array
         localStorage.setItem("productId", JSON.stringify(updatedIds));
 
         Swal.fire({
@@ -64,15 +45,7 @@ const Order = () => {
       }
     });
   };
-  // // console.log(id);
-  // console.log(products);
 
-  // const product = products.filter((p) => p.id === allId?.map((i) => i));
-  // console.log(product);
-
-  // mySolvedProblems.reduce((total, problem) => total + problem.points, 0) || 0;
-
-  // console.log(total);
   return (
     <div className=" w-[90%] mx-2">
       <div className="overflow-x-auto w-full">

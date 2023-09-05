@@ -1,7 +1,19 @@
+import { FaRegStar, FaStar } from "react-icons/fa";
+import Rating from "react-rating";
 import Swal from "sweetalert2";
 
 const ProductCard = ({ product }) => {
-  const { name, img, price, seller, stock, id } = product;
+  const {
+    name,
+    img,
+    price,
+    seller,
+    stock,
+    id,
+    ratings,
+    ratingsCount,
+    category,
+  } = product;
 
   const handelerAddProdut = (id) => {
     // Display success message
@@ -28,10 +40,10 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="text-gray-900 ">
-      <div className="bg-gray-200 border border-red-500 flex items-center justify-center">
+      <div className="bg-gray-200 border rounded-lg border-gray-200 hover:border-[#BE185D] transition-all flex items-center justify-center">
         <div className="rounded-lg bg-gray-200 overflow-hidden shadow-2xl w-full">
           <img
-            className="h-48 w-full object-cover"
+            className="h-48 w-full object-cover bg-center"
             src={img}
             alt="Home in Countryside"
           />
@@ -44,26 +56,36 @@ const ProductCard = ({ product }) => {
                 {stock} Stock &bull; Manufacturer: {seller}
               </div>
             </div>
-            <h4 className="mt-2 font-semibold text-lg leading-tight truncate">
+            <h4 className="mt-2 font-bold text-lg leading-tight truncate text-gray-700">
               {name}
             </h4>
 
-            <p className="mt-1">${price}</p>
+            <div className="flex gap-x-16 my-1">
+              <p className="mt-1">{category}</p>
+              <p className="mt-1 font-semibold">${price}</p>
+            </div>
             <div className="mt-2 flex items-center">
               <span className="text-teal-600 font-semibold"></span>
-              <span>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="far fa-star"></i>
-              </span>
+              <p className="flex items-center">
+                <Rating
+                  placeholderRating={ratings}
+                  emptySymbol={<FaRegStar></FaRegStar>}
+                  placeholderSymbol={
+                    <FaStar className="text-yellow-400"></FaStar>
+                  }
+                  fullSymbol={<FaStar></FaStar>}
+                  readonly
+                />
+                <span className="mb-1 ml-2 leading-5">Rating : {ratings}</span>
+              </p>
 
-              <span className="ml-2 text-gray-600 text-sm">34 reviews</span>
+              <span className="ml-2 text-gray-600 text-sm">
+                {ratingsCount} reviews
+              </span>
             </div>
             <button
               onClick={() => handelerAddProdut(id)}
-              className="py-2 px-4  bg-pink-600 hover:bg-pink-700 focus:ring-pink-500 focus:ring-offset-pink-200 text-white w-2/4 text-center transition ease-in duration-200  text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+              className="py-2 px-4  bg-pink-600 hover:bg-pink-700 focus:ring-pink-500 focus:ring-offset-pink-200 text-white w-full mt-4 text-center transition ease-in duration-200  text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
             >
               Add to Card
             </button>
