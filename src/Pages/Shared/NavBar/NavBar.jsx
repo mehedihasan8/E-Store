@@ -23,7 +23,7 @@ const NavBar = () => {
         </Link>
         <Link to="/order">
           <div className="indicator mt-3">
-            <span className="indicator-item badge bg-[#e6a749]">
+            <span className="indicator-item badge bg-[#fbbd23]">
               +{product?.length || 0}
             </span>
             <button className="px-2 py-1">

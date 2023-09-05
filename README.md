@@ -9,6 +9,10 @@ Local E-Store is a React.js application for managing a local online store. It us
 - Review and manage your cart.
 - Place orders.
 
+## Live link
+
+- [Local E-Store](https://sweet-cendol-7624b3.netlify.app/)
+
 ## Dependencies
 
 - [React.js](https://reactjs.org/)
