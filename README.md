@@ -1,8 +1,29 @@
-# React + Vite
+# Local E-Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Local E-Store is a React.js application for managing a local online store. It uses Tailwind CSS, DaisyUI, React Icons, SweetAlert2, and React Ratings to provide a smooth user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse and search for products.
+- Add products to your cart.
+- Review and manage your cart.
+- Place orders.
+
+## Dependencies
+
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [SweetAlert2](https://sweetalert2.github.io/)
+- [React Ratings](https://www.npmjs.com/package/react-ratings)
+
+## Getting Started
+
+## npm run dev
+
+- Open your web browser and go to http://localhost:5073 to access the application.
+
+```
+
+```

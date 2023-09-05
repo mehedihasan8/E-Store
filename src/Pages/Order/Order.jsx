@@ -1,7 +1,6 @@
 import Swal from "sweetalert2";
 import useCard from "../../Hooks/useCard";
 import { FaTrashAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Order = () => {
@@ -107,7 +106,7 @@ const Order = () => {
           <hr className="border-2 mt-4" />
           <p className="pt-4 font-semibold">Selected Items: {product.length}</p>
           <p className="pt-4 font-semibold">Total Price: ${total}</p>
-          <p className="pt-4 font-semibold">Shipping: ${totalShipping}</p>
+          <p className="pt-4 font-semibold">Total Shipping: ${totalShipping}</p>
           <p className="pt-4 font-semibold">Tax: ${tax.toFixed(2)}</p>
           <h6 className="font-semibold text-lg pt-4">
             Grand Total: ${grandTotal.toFixed(2)}

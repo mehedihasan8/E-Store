@@ -4,7 +4,7 @@ import Product from "../Product/Product";
 
 const Home = () => {
   return (
-    <div className="px-8">
+    <div className="">
       <Banner />
       <Discount />
       <Product />
