@@ -1,9 +1,11 @@
 import Banner from "../Banner/Banner";
+import Product from "../Product/Product";
 
 const Home = () => {
   return (
-    <div>
+    <div className="px-8">
       <Banner />
+      <Product />
     </div>
   );
 };
