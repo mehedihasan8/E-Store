@@ -41,7 +41,7 @@ const ProductCard = ({ product }) => {
                 New
               </span>
               <div className="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
-                {stock} Stock &bull; {seller}
+                {stock} Stock &bull; Manufacturer: {seller}
               </div>
             </div>
             <h4 className="mt-2 font-semibold text-lg leading-tight truncate">
@@ -63,7 +63,7 @@ const ProductCard = ({ product }) => {
             </div>
             <button
               onClick={() => handelerAddProdut(id)}
-              className="btn btn-active btn-neutral"
+              className="py-2 px-4  bg-pink-600 hover:bg-pink-700 focus:ring-pink-500 focus:ring-offset-pink-200 text-white w-2/4 text-center transition ease-in duration-200  text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
             >
               Add to Card
             </button>

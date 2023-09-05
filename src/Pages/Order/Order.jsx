@@ -30,7 +30,40 @@ const Order = () => {
   //     .then((res) => res.json())
   //     .then((data) => setProducts(data));
   // }, []);
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result) {
+        const idToDelete = id; // Replace with the ID you want to delete
 
+        // Get the existing array of IDs from localStorage
+        const existingIds = JSON.parse(localStorage.getItem("productId")) || [];
+
+        // Remove the ID you want to delete
+        const updatedIds = existingIds.filter((id) => id !== idToDelete);
+
+        // Update the "productId" key in localStorage with the modified array
+        localStorage.setItem("productId", JSON.stringify(updatedIds));
+
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Your Product Delete Successful!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+
+        console.log("ID deleted from localStorage:", idToDelete);
+      }
+    });
+  };
   // // console.log(id);
   // console.log(products);
 
