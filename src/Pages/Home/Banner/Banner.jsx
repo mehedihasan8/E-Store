@@ -14,8 +14,8 @@ const Banner = () => {
               understandable. An indefinite and homogeneous environment in which
               natural events and human existence take place.
             </p>
-            <div className="flex mt-8">
-              <button className="btn btn-outline btn-success">
+            <div className="flex mt-4">
+              <button className="py-2 px-4  bg-pink-600 hover:bg-pink-700 focus:ring-pink-500 focus:ring-offset-pink-200 text-white w-1/3 mt-4 text-center transition ease-in duration-200  text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full">
                 Get started
               </button>
             </div>
