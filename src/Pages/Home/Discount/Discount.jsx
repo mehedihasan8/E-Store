@@ -9,7 +9,7 @@ const Discount = () => {
           </h2>
           <div className="space-x-2 text-center py-2 lg:py-0">
             <span>Plus free shipping! Use code:</span>
-            <span className="font-bold text-lg">Local E-Store</span>
+            <span className="font-bold text-lg">Local E-Store##</span>
           </div>
           <button className="py-3 px-6  bg-pink-600 hover:bg-pink-700 focus:ring-pink-500 focus:ring-offset-pink-200 text-white w-36 text-center transition ease-in duration-200  text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full">
             Shop Naw

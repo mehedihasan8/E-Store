@@ -26,7 +26,7 @@ Local E-Store is a React.js application for managing a local online store. It us
 
 ## npm run dev
 
-- Open your web browser and go to http://localhost:5073 to access the application.
+- Open your web browser and go to http://localhost:5173 to access the application.
 
 ```
 
