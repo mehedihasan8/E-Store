@@ -1,14 +1,29 @@
+import Swal from "sweetalert2";
+
 const ProductCard = ({ product }) => {
   const { name, img, price, seller, stock, id } = product;
 
   const handelerAddProdut = (id) => {
-    let existingItems = JSON.parse(localStorage.getItem("productId")) || [];
-    if (!Array.isArray(existingItems)) {
-      existingItems = [];
-    }
-    existingItems.push(id);
+    // Display success message
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Add Successful!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
 
-    localStorage.setItem("productId", JSON.stringify(existingItems));
+    // Get existing items from localStorage
+    let existingItems = JSON.parse(localStorage.getItem("productId")) || [];
+
+    // Check if the id already exists in the array
+    if (!existingItems.includes(id)) {
+      // If it doesn't exist, push it to the array
+      existingItems.push(id);
+
+      // Store the updated array back in localStorage
+      localStorage.setItem("productId", JSON.stringify(existingItems));
+    }
   };
 
   return (
