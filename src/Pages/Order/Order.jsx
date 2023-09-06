@@ -36,7 +36,7 @@ const Order = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
-      if (result) {
+      if (result.isConfirmed) {
         const idToDelete = id;
 
         const existingIds = JSON.parse(localStorage.getItem("productId")) || [];
@@ -53,7 +53,7 @@ const Order = () => {
           timer: 1500,
         });
 
-        console.log("ID deleted from localStorage:", idToDelete);
+        // console.log("ID deleted from localStorage:", idToDelete);
       }
     });
   };
@@ -65,9 +65,9 @@ const Order = () => {
           {/* head */}
           <thead>
             <tr>
-              <th className="font-semibold">#</th>
-              <th className="font-semibold">Course</th>
-              <th className="font-semibold">Course Name</th>
+              <th className="font-semibold">No</th>
+              <th className="font-semibold">img</th>
+              <th className="font-semibold">Product Name</th>
               <th className="font-semibold">Price</th>
               <th className="font-semibold">Shipping</th>
               <th className="font-semibold">Remove</th>
